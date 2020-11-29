@@ -1,0 +1,154 @@
+# What is the main() method declared as static?
+
+main() method called by the Jvm even before the instantiate of the class hence itis declared as static. Basically JVM at first runs the static method so by declaring the main method as static, we are telling JVM to run the main method first.
+
+#62 Why the main method is public void static ? ( What is the argument of the main() method?)
+
+The publoc is an access modifier, avoid is a return type and static means main() method called by the JVM even before the instantiate of the class. String[] means the main() method accepts an array of String objects as an argument. Thed means we are passing String[] array as an argument through the parameter of the main method, or main() method accepts an array of String objects as an argument.
+
+#63 What is System.out.println?
+
+System is a class, out is a variable, & print is the method name.
+
+#64 Which package is impirted by default?
+
+java.lang package is imported by default even without a package declaration.
+
+#65 Do i meed to import java? lang package at any time? Why?
+
+java.io is a package in java whrer you can get FileinputStream and FileOutputStream etc.
+
+#66 What modifiers may be used with a top-level or regular class may be the default,public, abstract, or final.
+
+#67 What dose it mean that a method or field is static?
+
+static variable is called a class variable where all objects of the class refer to the same variable. If one object changes the value the change gets reflected in all the objects. a static variable always works with change value. the static variable you can call with the class name means without creating an object. static methods can be eferenced with the name of the class rather than the name of a particular object of the class (though that works too ) and all the member of the static metid has to be static.
+
+#Can a top-class declare as private or protected?
+
+We cannot declare a top - level class as static,but only the inner class can be declared as static.
+
+Example: 
+public class Test{
+static class Inner Class{
+// is called inner class
+}}
+
+#70 What is an Array in java?
+
+A Java Array is a collection of variables of the same type.  For instance, an Array of int is a collection of variables of the type int. the variables in the Array are ordered and each has an index. you will see how. to index into an Array later in this text. Here is an illustration of java arrays:
+
+int[] number= new int[10];
+The array is a container that holds the same type of value and fixed size. When you need more than one value in the same variable.
+
+#71 How to get the max number from an array?
+
+int a[]={4,76,4,8,9,80,67};
+int max=a[0];
+for(int i=1; i)
+if(a[i]>max){max=a[i];}}
+System.out.println(max);
+
+#72. How to get an array as a descending order or ascending?
+
+int a[]={6,8,7,9,4};
+Array.sort(a);
+for(int i=0; i<a.length(); i++){
+System.out.println(a[i];//ascending order}
+
+for (int i=a,length; i>=0; i--)
+{System.out.printnl(a [i];)//descending order}
+</a.length(); i++){
+
+#73. How to get minimum from an array?
+
+int a[]={4,85,4,8,9}
+int min =a[0];
+for(int i =1; i
+if(a[i]<min){
+min =a[i];
+}}
+System.out.println(min);</min)
+
+#74.How to copy one array to another array?
+
+int a[]={6,8,7,9,4};
+int b[]=new int [a.length];
+for (int i=0; i<a.lungth(); i++){
+b[i]=a[i];}
+</a.length; i++){
+#75. How to get second heighest number?
+
+int a[]={2,4,6,1,8,5,9,44,66,1,70};
+int max=a[0];
+int second_max=a[0];
+for (int i=1; i
+if (a[i]>max){
+second_max=max;
+max=a[i];
+}}
+
+System.out.println(second_max+"isthe second max number.");
+
+#76. Are arrays primitive data types?
+
+No, in Java Array are objects.
+
+#77. How to find duplicate value from an array?
+
+Public boolean main(){
+int a[]={5,8,9,65,76};
+for (int i=0; i<a.length ; i++)
+{
+for(int j=i+1; j<a.length; j++)
+{
+if(a[i]==a[j])
+System.out.println ("duplicate value is " + a[i]);
+return true;
+}
+
+}} return false;
+
+#78. Wht is an interface be able to extend more than one interface but aclass can not extend more than one class?
+
+Basically Java does not allow multiple inheritances, so a Class is restricted to extend only one Class. But an Interface is a pure abstraction model and does not have inheritance hierarchy like classes (do remember that the base class of all classes is Object). so an Interface is  allowed to extend more than one Interface.
+
+#79. Can a class be defined inside an Interface?
+
+Yes, it is possible.
+
+#80. Can an Interface be defened inside a class?
+
+Yes, it is possible.
+
+#81. What modifiers are allowed for methods in Interdace?
+
+Only public and abstract modifiers are allowed for methods in interfaces.
+
+#82. Can an abstract class be final?
+
+An abstract class must not be declared as final.
+
+#83. What are Serialization and Deserialization? 
+
+Serialization is a process or mechansm of converting the state of an object into a byte stream.
+Deserialization is the reverse process of serialization where the byte stream is used to recreate the actual java object in memory. 
+To make a java object serializable we have to implement either the java.io. Serializable interface or its subinterface, java.io. Externalizable.
+
+#84. What is the common usage of serialization?
+
+Whenever an object needs to be sent over the network or stored in files, objects need to be serialized. Because our network infrastructure and hard disk are hardware components that understand only bits and bytes but not java objects.
+
+#85. What is the purpose of garbage collection in java, and whenis it used?
+
+The purpose of garbage collection is to identify and discard objects that are no longer needed by a program so that their resources can be reclaimed and reused.
+A java object is subject to garbage collection when it becomes unreachable to the program in which it is used.
+
+#86. Can a class be declared as static ?
+
+Example:
+public class Test{
+static class InnerClass{//is called inner class}}
+
+#87. When will you define a method as static and what is the restriction?
+

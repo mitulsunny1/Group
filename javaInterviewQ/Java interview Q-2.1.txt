@@ -1,0 +1,471 @@
+
+
+16# Why Java is OOP language?
+
+in java, we can create our own object, when we use the object, it behave exactly same way without changing anythiing from the class. in addition, java support Abstraction, Inheritance, Encapsulation, and Polymorphism. therefore java is called object orientated programming language or OOP language.
+
+17#Why java is not a pure object-oriented programming language?
+
+Java uses primitive data types and cannot inherit more than one class at a time.
+
+18# What is Abstraction?
+
+Abstraction is the process of hidding the implementation details and showong only the functionality to the user.
+there are two ways to achieve abstraction in java:
+A. Abstract class (0 to 100%)
+B. Interface (Achieve 100%)
+
+19# What is Inheritance in Java?
+
+inhertance in java is a mechanism, in which one objedt acquires all the properties and behaviors of a parent object. inheritance represents the IS-A relationship,  which is also known as a parent-child relationship. it is a important part of OOPs.
+Exp:
+public class First{   
+         int my = 9;   // Global variable
+         static final int CITY_TAX= 9; //Constant variable
+         static int data = 99;  //Class variable
+  public static void you(){ 
+        int any = 100; //Local variable
+      }
+  }
+
+
+public class Second extends First{   
+  public static void main(String[]args){ 
+       System.out.println(CITY_TAX)
+       you();
+      }
+   }
+In the above example, we have two class named as First, and Second. Here we have inherited the First class in the Second class. therefore, in our Second class, we are able to class the variable CITY_TAX and method You() without creating any object. the First class is known as Parent class or Supper class, and the Second class is known as child class or Sub class.
+
+20# What is Encapsulation?
+
+Encapsulation is a process of wrapping the variables and methods together into a single unit. It is also hidding the data in order to make it safe from any modification. Make restricted to the members of that class.
+Levels are public , Protected, Private, Internal, and Protected Internal.
+
+21# What is Polymorphism?
+
+Poly means many and Morph means forms, togather polymorphism means many forms. 
+When we creat object of a child class by using the reference of parent class, called Polymorphism.
+there are two kinds of polymorphism.
+A. Compile-time polymorphism.(Method overloading is compile-time)
+B. Runtime Polymorphism.(Method overriding run-time)
+
+Example: 
+
+public class First{   
+         int my = 9;   // Global variable
+         static final int CITY_TAX= 9; //Constant variable
+         static int data = 99;  //Class variable
+  public void you(){ 
+        int any = 100; //Local variable
+      }
+  }
+
+
+public class Second extends First{   
+  public void my(){ 
+       System.out.println("Running from second class")
+   }
+}
+
+
+public class Third{   
+  public static void main(String[]args){ 
+       First first=new First();    //We can create First class object by using the reference of First class
+       Second second=new Second();  //We can create Second class object by using the reference of Second class                                                                                   
+      First firstSecond=new Second();  //We can create Second class object by using the reference of First class
+    }                                                                                 
+   }
+
+Above example, we can create the object of First and Second class by using the reference of First class. 
+
+22# What is Method Overloading?
+
+When one class has two or more methods having the same name but parameters size, sequences, or data type is different from each other method then it is called method overloading.
+
+*Example: when number of Parameters are different
+public class Testing{   
+   public void m1(){  
+         }
+  public void m1(String name){ 
+        int any = 100; //Local variable
+      }
+  }
+
+
+*Example: when types of parameters are different 
+public class Testing1{   
+   public void m2(int number){  
+         }
+  public void m2(String name){ 
+        int any = 100; //Local variable
+      }
+  }
+
+*Example: when sequences of parameters are different 
+public class Testing3{   
+   public void m3(int number, String name){  
+         }
+  public void m3(String name, int number){ 
+        int any = 100; //Local variable
+      }
+  }
+
+23# What is method overriding?
+
+condition to be followed in method overriding,
+* class will be different
+*Method name must be same as in the parent class.
+* Parameter size must be same as.
+*there must be an IS-A relationship
+if a subclass provides the specific implementation of the method that has been declared by one of its parent class, it is known as method overriding. 
+
+Exp:
+class Animal {
+   public void move() {
+      System.out.println("Animals can move");
+   }}
+class Dog extends Animal {
+   public void move() {
+      System.out.println("Dogs can walk and run");
+   }
+   public void bark() {
+      System.out.println("Dogs can bark");
+   }}
+public class TestDog {
+   public static void main(String args[]) {
+      Animal a = new Animal();   // Animal reference and object
+      Animal b = new Dog();   // Animal reference but Dog object
+      a.move();     // runs the method in Animal class
+      b.move();      // runs the method in Dog class
+      b.bark();
+   }} 
+
+24# What is the interface?
+
+An interface is a collection of abstract methods. 
+Before using any abstract method, it need to implements in a class.
+interface can extends another interface
+class can implements one or more interface at the same time.
+
+Example: 
+
+public interface Testing{   
+   public void m1(); } 
+public class My implements Testing{       
+  public void m1(){ 
+      System.out.println("Hello");
+      }
+  }
+
+25# What are runtime exceptions?
+
+Runtime exceptions are those exceptions that are not warned by the compiler but it is thrown at runtime.
+Exp: StackOverflowException, MemoryoutException, ArithmaticException.
+
+26# What are the difference between Declaration and Definition in Java?
+
+Declaration: If you just declare a class or method or variable without mentioning anything about what that class or method or vaiable looks like then it is called a declaration in java.
+
+Definition: If you define how a class or method or variable is implemented then it is called definition in java.
+Example: Whenwe create an interface or abstract class, we simply declare a method but not define it.
+
+27# What is Constructor?
+
+A constructor is a special type of method that is used to initialize the object.A constructor is a block of code that executes at the time of object creation and it  constructs an object. To construct an object means let's say you want to change the value of a reference then you can use a constructor.
+
+RULES FOR CONSTRUCTOR ARE:
+*constructor name should be the same as the class name.
+*must have no return type not even void.
+*It is called automatically at the time of object creation.
+*Default constructor(no parameter), Parametrized.
+*It can be overloaded, but cannot be overridden.
+
+Exp:
+public class Teacher{String name, gender; 
+			int phone;
+		teacher(){
+		system.oit.println("No Value")}//Default Constructor
+
+Teacher(String n, String g, int p){
+name=n;
+gender=g;
+phone=p;}}//Parameterized Constructor
+
+It is also called a constructor overloading because under the same class more then one constructor with the same name but different parameter.
+
+28# Difference between encapsulation and private variable?
+
+Encapsulation is aterm that is found in the Object-Oriented paradigm and refers to keeping the data in private fields and modify it only through methods.
+thus encapsulation may be seen as a way of achieving data hidding in object-oriented systems.
+
+29# What id the difference between = and == sign
+
+= will help to assign value in a variable .
+==will help to compare two objects.
+
+30# What id the % operator?
+
+It is referred to as the remainder operator. it returns the remainder of dividing the first.
+
+31# Difference between == and equal()?
+
+== sign will compare two objects . 
+the equal() method will compare between what two objects contains.
+
+32# Which object-oriented concept is achieved by using overloading and overriding ?
+
+Polymorphism.
+
+33# What is the difference between a constructor and a method?
+
+A constructor is a member function of a class that is used to create objects of that class. It has the sme name as the class itself, has no return type, and is invoked using the new operator.
+A method is an ordinary member function of a class. It has its own name, a return type 9which may be void ), and is invoked using the reference.
+
+34# Does a class inherit the constructors of its superclass?
+
+A class does not inherit constructors from any of its superclasses.
+
+35# When does the compiler supply a default constructor for a class?
+
+the compiler supplies a default constructor for a class if no other constructors are provided.
+
+36# How is this() and super() used with constructors?
+
+this() is used to invoke the constructor of the same class.
+super() is used to invoke the constructor of the superclass.
+
+37# What is a class variable ?
+
+When a global variable declared as static is called class variable.
+
+## What is the default value for different data types?
+
+Data type----------Default value (for fields)
+	BYTE------------0
+	SHORT-----------0
+	INT-------------0
+	LONG-----------0L
+	FLOAT-----------0.0f
+	DOUBLW---------0.0d
+	CHAR-----------u0000
+	STRING---------null
+	BOOLEAN--------false
+
+38# Difference between instance and class variable?
+
+Class Variable: When you declare a variable in a class level with static keyword is called a class variable.
+
+Instance Variable: When you declare a variable in a class level without  static keyword is called instance variable.
+
+39# What is a regular expression in java?
+
+A regular expression is a special sequence of characters that helps you match or find other strings or sets of strings, using a specialized syntex held in a pattern. they can be used to search , edit, or manipulate text and data.
+
+40# Example of Regulas Expression:
+ 
+public static boolean isValidPassword(String password) {
+   String regex = "^(?=.*[0-9])" + "(?=.*[a-z])(?=.*[A-Z])" + "(?=.*[@#$%^&+=])" + "(?=S+$).{8,20}$";
+  Pattern p = Pattern.compile(regex);
+  if (password == null) {
+  return false;
+   }
+   Matcher m = p.matcher(password);
+  boolean match=m.matches();
+ return match;
+}
+
+41# What is the difference between the inner class and nested class?
+
+Nested classes are divided into two categories: static and non-static.
+Nested classes that are declared static are simply called static nested classes.
+Non-static nested classes are called inner classes.
+
+42# What are the different ways to handle exceptions?
+
+There are two ways to handle exceptions:
+a.By wrapping the desired code in a try block followed by a catch block to catch the exceptions.
+b. List the desired exceptions in the throws clause of the method and let the caller of the method handle those exceptions. Combination of try catch block.
+
+43#Combination of try catch block or How to handle Exception?
+
+By using the Try-Catch block we can handle the exception.
+the basic syntax of the Try -Catch block and the combination of Try-Catch block is explained below:
+
+ First combination:
+    Try{
+   //Any statement;}
+  catch(AnyException Class     Any variable name){
+   System.out.println(“print whatever you want”);} 
+  Second Combination:
+  Try{
+  //Any statement;}
+  catch (AnyException Class     variable name){
+  System.out.println(“print whatever you want”);
+}
+   catch (AnyException Class   variable name){
+  System.out.println(“print whatever you want”);
+  catch (Exception(-parent calss of exception variable name){ 
+  System.out.println(“print whatever you want”);} 
+  Third combination:
+ Try{
+//Any statement;}
+  catch (AnyException Class     variable name){
+  System.out.println(“print whatever you want”);
+  }catch (AnyException Class     variable name){
+  System.out.println(“print whatever you want”)}
+  catch (Exception(-parent class of exception variable name){
+  System.out.println(“print whatever you want”);
+}
+ finally{
+   //statements;}
+Fourth combination:
+Try{Any statement}
+finaly{
+//statements;}
+
+finally block will always execute no matter what.
+
+44# Is it necessary that each try block must be followed by a catch block?
+
+Itis not necessary that each try block must be followed by a catch block. I t should be followed by either try block must be followed by a catch block. It should be followed by either a catch block or a final block. And whatever exceptions are likely to be thrown should be declared in the throws clause of the method .
+
+45# How does a try statement determine which catch clause should be used to handle an exception?
+
+When an exception is thrown within the body of a try statement, the catch clauses of the try statement are examined in the order in which they appear.
+The first catch clause that is capable of handling the exception is executed. The remaining catch clauses are ignored.
+
+46# What if System.Exit() in try block?
+
+System.Exit Exits the program immediately, bypassing any other code execution (such as finally blocks).
+if you want to exit the program after finally blocks run,
+throw an exception instead. If JVM exits while the try or catch code is being executed.
+e.g. System.exit(),
+then the finally bloch may not execute.
+
+47# What is the common usage of serialization?
+
+Whenever an object needs to be send over the network or stored in files, objects need to be serialized. Becase our network infrastructure and hard disk are hardware components that understand only bites and bytes but not java objacets.
+
+48# What is the difference between final finally and finalize?
+
+final: final is a reserved keyword in java. We can not use it as an identifier as it is reserved. We can use this keyword with variables, method, and also with classes. the final keyword in java has different meanings depending upon it is applied to variable , class, or method .
+
+finally: is a keyword that is used with try and catch block and guarantees that a section of code will be executed, even of an executed, even if an exception  is thrown. the finally block will be executed after the try and catch blocks, but before control transfers back to its origin.
+
+finalize method: it is a method that the java Garbage Collector always calls just before the deletion/destroying the object which is eligible for garbage collection, so as to perform clean-up activity. Clean-up activity means closing the resources associated with that object like Database connection, or we can say resources de-allocation. Remember it is not a reserved keyword. Once the finalize method completed immediately garbage collector destroys that object. finalize method is present in object class and it syntax.
+
+
+49# How to find maximum and minimum value in an array in java?
+
+puboic class Min /andMax{
+public int max(int [] attay){
+int max =0;
+for(int i=0; i<array.length; i++){
+if(array[i]>max){
+max=array[i];
+}}
+return max;
+}
+public int min(int [] array){
+int min=array[0];
+for(int i=0; i<array.length; i++){
+if(array[i]<min){
+min= array[i];}
+}
+return min;
+}
+
+public static void main((String[] args){
+int[] my array= {23,92,56,39,93};
+MinAndMax m= new MinAndMax();
+System.out.println(Maximum value in the array is ::" + m.max(myArray));
+System.out.println(Maximum value in the array is::" + m.min(myArray));}
+}
+
+#50# Find the Second largest element in an array.
+import java.util.*;
+public class SecondLargesNew{
+public static void main(String []args)
+{int[] array={0,12,74,26,82,3,89,8,94,3};
+int highest= integer.MIN_VALUE;
+int secondHighest= integer.MIN_VALUE;
+
+for(int i=0; i<array.length; i++)
+{if(array[i]>highest)
+{
+//...shift the current highest number to second highest 
+secondHighest=highest;
+//...and set the new highest.
+highest=array[i];
+}
+ else if (array[i]>secondHighest){
+//just replace the second highest 
+secondHight=array[i];
+}
+}
+System.out.println("second largest is " + cecondHighest);
+System.out.println("largest is "+ highest);}
+}
+
+51# How to generate random numbers using java?
+
+ By using Random class
+   Random random=new Random();
+
+   int a = random.nextInt(10)+1; //from 1 to 10 // from 10 to 100 --(90)+10
+
+    System.out.println(a);
+
+    //or Using Math class
+  int b= (int) (Math.random()*10); //from 0 to 9 // from 1 to 10 --*10+1
+
+    System.out.println(b);
+
+
+52#What is Abstract Class in java?
+
+Abstract classes enforce abstraction, the creation of an object is not possible with an abstract class, but it can be inherited. The abstract class has an abstract and non-abstract method. Non-abstract class can't have an abstract method.
+ Rules for Abstract Method:
+
+An abstract method has nobody.
+it must end with a semicolin,
+it must be in the abstract class,
+it must be overridden
+it can never be final and statec.
+
+#53# If you create an object it showing an error  what could be the reason?
+
+Mainly it could be the constructor, parameter that did not match.
+
+
+#54# What are Wrapper classes?
+
+Java provides specialized classes corresponding to each of the primitive data types.
+these are called wrapper classes.
+Exp: Integer, Character, Double, Boolean etc.
+
+#55# What is a class variable?
+
+When a global variable declared as static is called class variable.
+
+56# What is the default value of an object reference declared as an instance variable?
+
+the default value will be null unless we define it explicitly.
+
+57# What is a transient variable?
+
+Transient variable is a variable that may not be serialized.
+
+58# Should a main() method be compulsorily declared in all java classes?
+
+it is not required for all classes but we need a class with the main() method , at least once to execute our project.
+
+59# What is the return type of main() method?
+
+The return type of main() method is declared as void so it does not return anything.
+
+60# What is java.io?
+
+java.io is a package in java where you can get FileInputStream and FileOutputStream etc.
+
