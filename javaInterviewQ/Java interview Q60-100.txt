@@ -152,3 +152,4 @@ static class InnerClass{//is called inner class}}
 
 #87. When will you define a method as static and what is the restriction?
 
+#88.
