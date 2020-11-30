@@ -152,4 +152,25 @@ static class InnerClass{//is called inner class}}
 
 #87. When will you define a method as static and what is the restriction?
 
-#88.
+When a method needs to be accessed even before the creation of the object of the class then we should declare the method as static methods can be referenced with the name of the class rather than the name of a particular object of the class(though A static method can be overload but you cannot override.
+
+
+#88.What is the importance of static variables ?
+
+Static variable is called a class variable where all objects of the class refer to the same variable . if one object changes the value then the change gets reflected in all the objects . a static variable always works with change value. a static variable you can call with the class name means without creating an object.
+
+#89.  What is anabstract method ?
+
+An abstract method is a method that is unimplemented. 
+
+#90. What is casting ?
+
+Casting is the conversion of one type to another which means is takeng an object of one particular type and "turning it into " another Object type.
+there are two types of casting :
+A. Primitive or Numeric types:
+1) Implicit/Upcasting--Lower to Upper (Compiler Responsibility, No chance of data loss). For Ex. byte to int 
+2)Explicit/Downcasting-- Upper to Lower (Programmer Responsibilety, big chance of dataloss). For Ex. int to byte 
+
+B. Reference or Object types: Casting between object references is used to refer to an object by a compatible class, interface, or aray type reference.
+1) Implicit/Upcasting -- Child class to Parent class.
+2)Explicit/Downcasting-- Parent class to the Child class.
