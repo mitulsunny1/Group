@@ -275,3 +275,82 @@ System.out.println(X); }
 #105. What is the difference betweenStringBuilder and string-buffer?
 
 The main difference between StringBuilder and string-buffer is,  StringBuilder is Synchronized and StringBuffer is not synchronized. Also, StringBuffer is faster than StringBuilder.
+
+#106. /do you know what  are the current version of all the tools you are using ?
+
+#107. What is modifier? How many types of modifiers are there and what are those?
+
+A modifier is a Keyword placed in a class, the method or variable declaration that changes how it operates. There are two types of modifier.
+
+A. Access Modifier: It gives us an access level of class, methods, and variable. There are some different access levels based on package and to create an object or inherited.
+
+Access		same Package 		Same Package 		Different Package		Different Package
+
+Modifier 		By OC			By Inheritance 		By OC			By Inheritance 
+
+DEFAULT		YES			YES			NO			NO
+
+PROTECTED 	YES			YES			NO			YES
+
+PUBLIC 		YES			YES			YES			YES
+
+PRIVATE		NO 			NO 			NO			NO
+
+#108. What are the steps in the JDBC connection ?
+
+While making a JDBC connection we go through the following steps:
+
+Package	htmldriver;
+
+import 	java.sql.Connection;
+
+import	java.sql.Statement;
+
+import 	java.sql.ResultSet;
+
+import	java.sql.DriverManager;
+
+import 	java.sql.SQLException;
+
+public 	class SQLConnector  {
+	public static void main(String[] args) throws classNotFoundException,
+SQLException  {
+			//Connection URL Syntax:
+"jbdc : mysql : // ipaddress : portnumber / db_name"
+		String dbUrl  =  "jdbc:mysql : //localhost :3036/emp";
+
+		//Database Username
+		String usermame  = "root";
+
+		//Database Password
+		String password  = "root";
+
+		//Query to Execute
+		String query  =  "select  *  from employee; ";
+
+		//Load mysql jdbc driver
+		Class.forName ("com.mysql.jdbc.Driver" );
+
+		//Create Connectation to DB
+		Connection con  = DriverManager.getConnection(dbUrl,username,password);
+		
+		//Create Statement object
+		Statement stmt  = con.createStatement();
+
+		//Execute the SQL Query. Store results in ResultSet
+		ResultSet rs = stmt.executeQuery (query);
+
+		//While loop to iterate through all data and print results
+		while (rs.next() ) { 
+				String myName  = rs.getString(1);
+
+			String myAge  = rs.getString(2);
+			System.out.Println (myName+ "   " + myAge );
+		}
+
+		//  closing DB Connection
+		con.close();
+		}
+	}
+	
+ 
