@@ -1,0 +1,39 @@
+12# Why java is platform-independent language?
+
+We can write and compile java code in one platform (exp: windows) and can execute the class in any other supported platform such as linux , solaris etc because of JVM which actully helps to do that.
+
+13# what os the base class of all classes?
+
+Object class is the base class of all class in java.
+
+14# What is the local and global variable?
+
+Local variable: which variable decclared inside methods, constructors, or blocks called Local variables .
+
+Global variable: a variable declared inside the class but outside the method called Global variable. also known as Instance variable.
+
+Class variable: its also known as static variables. when we declare a vatiable with static keyword on aclass but outside a method , constructor or block that called class variable/class level variable.
+
+Constant variable: constant variable is a variable in java that is declared as static and final. then only one copy of the variable exists for all the instances of the class and th value can not be changed. variable name always All upper case will be followed.
+
+ Exp:
+public class Example{   
+         int my = 9;   // Global variable
+         static final int CITY_TAX= 9; //Constant variable
+         static int data = 99;  //Class variable
+  public void you(){ 
+        int any = 100; //Local variable
+      }
+  }
+
+
+15# What are the four fundamental concepts of java?
+
+Four fundamental or core concepts of OOP(Object Oriented Program) in java are :
+a. Abstraction 
+b. Inheritance
+c. Encapsulation 
+d. polymorphism
+
+Why Java is OOP language?
+

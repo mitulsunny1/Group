@@ -1,0 +1,356 @@
+# What is the main() method declared as static?
+
+main() method called by the Jvm even before the instantiate of the class hence itis declared as static. Basically JVM at first runs the static method so by declaring the main method as static, we are telling JVM to run the main method first.
+
+#62 Why the main method is public void static ? ( What is the argument of the main() method?)
+
+The publoc is an access modifier, avoid is a return type and static means main() method called by the JVM even before the instantiate of the class. String[] means the main() method accepts an array of String objects as an argument. Thed means we are passing String[] array as an argument through the parameter of the main method, or main() method accepts an array of String objects as an argument.
+
+#63 What is System.out.println?
+
+System is a class, out is a variable, & print is the method name.
+
+#64 Which package is impirted by default?
+
+java.lang package is imported by default even without a package declaration.
+
+#65 Do i meed to import java? lang package at any time? Why?
+
+java.io is a package in java whrer you can get FileinputStream and FileOutputStream etc.
+
+#66 What modifiers may be used with a top-level or regular class may be the default,public, abstract, or final.
+
+#67 What dose it mean that a method or field is static?
+
+static variable is called a class variable where all objects of the class refer to the same variable. If one object changes the value the change gets reflected in all the objects. a static variable always works with change value. the static variable you can call with the class name means without creating an object. static methods can be eferenced with the name of the class rather than the name of a particular object of the class (though that works too ) and all the member of the static metid has to be static.
+
+#Can a top-class declare as private or protected?
+
+We cannot declare a top - level class as static,but only the inner class can be declared as static.
+
+Example: 
+public class Test{
+static class Inner Class{
+// is called inner class
+}}
+
+#70 What is an Array in java?
+
+A Java Array is a collection of variables of the same type.  For instance, an Array of int is a collection of variables of the type int. the variables in the Array are ordered and each has an index. you will see how. to index into an Array later in this text. Here is an illustration of java arrays:
+
+int[] number= new int[10];
+The array is a container that holds the same type of value and fixed size. When you need more than one value in the same variable.
+
+#71 How to get the max number from an array?
+
+int a[]={4,76,4,8,9,80,67};
+int max=a[0];
+for(int i=1; i)
+if(a[i]>max){max=a[i];}}
+System.out.println(max);
+
+#72. How to get an array as a descending order or ascending?
+
+int a[]={6,8,7,9,4};
+Array.sort(a);
+for(int i=0; i<a.length(); i++){
+System.out.println(a[i];//ascending order}
+
+for (int i=a,length; i>=0; i--)
+{System.out.printnl(a [i];)//descending order}
+</a.length(); i++){
+
+#73. How to get minimum from an array?
+
+int a[]={4,85,4,8,9}
+int min =a[0];
+for(int i =1; i
+if(a[i]<min){
+min =a[i];
+}}
+System.out.println(min);</min)
+
+#74.How to copy one array to another array?
+
+int a[]={6,8,7,9,4};
+int b[]=new int [a.length];
+for (int i=0; i<a.lungth(); i++){
+b[i]=a[i];}
+</a.length; i++){
+#75. How to get second heighest number?
+
+int a[]={2,4,6,1,8,5,9,44,66,1,70};
+int max=a[0];
+int second_max=a[0];
+for (int i=1; i
+if (a[i]>max){
+second_max=max;
+max=a[i];
+}}
+
+System.out.println(second_max+"isthe second max number.");
+
+#76. Are arrays primitive data types?
+
+No, in Java Array are objects.
+
+#77. How to find duplicate value from an array?
+
+Public boolean main(){
+int a[]={5,8,9,65,76};
+for (int i=0; i<a.length ; i++)
+{
+for(int j=i+1; j<a.length; j++)
+{
+if(a[i]==a[j])
+System.out.println ("duplicate value is " + a[i]);
+return true;
+}
+
+}} return false;
+
+#78. Wht is an interface be able to extend more than one interface but aclass can not extend more than one class?
+
+Basically Java does not allow multiple inheritances, so a Class is restricted to extend only one Class. But an Interface is a pure abstraction model and does not have inheritance hierarchy like classes (do remember that the base class of all classes is Object). so an Interface is  allowed to extend more than one Interface.
+
+#79. Can a class be defined inside an Interface?
+
+Yes, it is possible.
+
+#80. Can an Interface be defened inside a class?
+
+Yes, it is possible.
+
+#81. What modifiers are allowed for methods in Interdace?
+
+Only public and abstract modifiers are allowed for methods in interfaces.
+
+#82. Can an abstract class be final?
+
+An abstract class must not be declared as final.
+
+#83. What are Serialization and Deserialization? 
+
+Serialization is a process or mechansm of converting the state of an object into a byte stream.
+Deserialization is the reverse process of serialization where the byte stream is used to recreate the actual java object in memory. 
+To make a java object serializable we have to implement either the java.io. Serializable interface or its subinterface, java.io. Externalizable.
+
+#84. What is the common usage of serialization?
+
+Whenever an object needs to be sent over the network or stored in files, objects need to be serialized. Because our network infrastructure and hard disk are hardware components that understand only bits and bytes but not java objects.
+
+#85. What is the purpose of garbage collection in java, and whenis it used?
+
+The purpose of garbage collection is to identify and discard objects that are no longer needed by a program so that their resources can be reclaimed and reused.
+A java object is subject to garbage collection when it becomes unreachable to the program in which it is used.
+
+#86. Can a class be declared as static ?
+
+Example:
+public class Test{
+static class InnerClass{//is called inner class}}
+
+#87. When will you define a method as static and what is the restriction?
+
+When a method needs to be accessed even before the creation of the object of the class then we should declare the method as static methods can be referenced with the name of the class rather than the name of a particular object of the class(though A static method can be overload but you cannot override.
+
+
+#88.What is the importance of static variables ?
+
+Static variable is called a class variable where all objects of the class refer to the same variable . if one object changes the value then the change gets reflected in all the objects . a static variable always works with change value. a static variable you can call with the class name means without creating an object.
+
+#89.  What is anabstract method ?
+
+An abstract method is a method that is unimplemented. 
+
+#90. What is casting ?
+
+Casting is the conversion of one type to another which means is takeng an object of one particular type and "turning it into " another Object type.
+there are two types of casting :
+A. Primitive or Numeric types:
+1) Implicit/Upcasting--Lower to Upper (Compiler Responsibility, No chance of data loss). For Ex. byte to int 
+2)Explicit/Downcasting-- Upper to Lower (Programmer Responsibilety, big chance of dataloss). For Ex. int to byte 
+
+B. Reference or Object types: Casting between object references is used to refer to an object by a compatible class, interface, or aray type reference.
+1) Implicit/Upcasting -- Child class to Parent class.
+2)Explicit/Downcasting-- Parent class to the Child class.
+
+#91. What  is an immutable class?
+
+If the class is final. the string is an immutable class. To create a customize immutable class all the property from the final class has to be final.
+
+#92. How to divide a string?
+
+String e= "how are you";
+String s1[]=e.split(" ");
+
+#93. How to find Sub String from a String?
+
+String s= "how are you";
+s.substring(1,4);
+
+#94. How to reverse aString?
+
+String sentence= "hope you are doing well";
+char[] c = sentence.toCharArray();
+String Buffer reverseWord= new StringBuffer();
+for(int i=c.length-1; i >=0; i --)
+{
+reverseWord.append(c[i]);
+}
+System.out.println(reverseWord);
+
+#95. How to reverse a sentence based on word ex: " how are you" will be "you are how".
+
+String sentence = "how are you";
+String word[] = sentence.split('' ");
+StringBuffer reverseWord = new StringBuffer();
+for(int i = word.length- 1; i > - 0; i --)
+{reverseWord.append(word[i]).append(" ");
+} System.out.println(reverseWord);
+
+#96. How to reverse a sentence based on word ex: how are you" will be "you are how".
+
+String sentence = "how are you ";
+String word [] = sentence.split ("  ");
+StringBuffer reverseWord = new StringBuffer();
+for (int i = word.length-1 ; i > =0; i -- ){
+reverseWord.append(word[i].append( "  ");
+} System. out.println(reverseWord);
+
+#97. Let's say you have a string (String s = " how are you") how can remove all space between word?
+
+String s = "How are you";
+S.replace("  ", "  ");
+The first paameter takes the old character and the  second parameter takes a new character.
+
+#98. How to compare two string?
+
+String s = " how";
+String s1 = " are";
+s.compareTo(s1);
+it will return int value:
+O- if both are equal
+(+) positive int - first object is  greater than the second one.
+(- ) negative int - first object is less than the second one.	
+
+#99. What is the difference between string  and string-buffer ?
+
+the main difference between String and StringBuffer is, a string  immutable and StringBuffer is mutable.
+
+#100.What is the difference  between if statement and a switch statement?
+
+A. IF-ELSE
+ 1.statement will be executed depending upon the output of the expression inside if statement.
+2.It using multiple statements for multiple choices.
+3. if statement evaluates integer, character, pointer, or floating-point type or boolean type.
+
+B. SWITCH
+ 1 statement that will be executed is decided by the user.
+2. It using  a single expression for multiple choices.
+3. The switch statement evaluates only character or integer value.
+
+#101. What is the difference between a while statement and a do -while statement?
+
+A While statement checks the condition at the beginning of a loop to see whether the loop will be executed or not.
+
+A Do-While statement checks at the end of a loop to see whether the condition is righe or not. The do-while statement will always execute the  body, lf a loop at least once.
+
+#102. What  is break and  continue keyword in the loop?
+
+A break statement results in the termination of the statement to which it applies (switch, for , do-while, or while loop).
+A continue statement is used to end the current loop iteration and return control to  the loop statement.
+
+#103. Can a for statement loop indefinitely?
+
+Yes, a for statement can loop indefinitely.
+
+#104. What is the syntax for  For Each loop/ Enhanced loop?
+
+When we have a variable who has more than one value and using those value if need to do any action on the same page then we should go for each loop . by default, it will increment 1. it cannot increment or decrement otherwise.
+int a[ ]  = { 4,6,5, 9,8};
+for (int x: a) {
+System.out.println(X); }
+
+#105. What is the difference betweenStringBuilder and string-buffer?
+
+The main difference between StringBuilder and string-buffer is,  StringBuilder is Synchronized and StringBuffer is not synchronized. Also, StringBuffer is faster than StringBuilder.
+
+#106. /do you know what  are the current version of all the tools you are using ?
+
+#107. What is modifier? How many types of modifiers are there and what are those?
+
+A modifier is a Keyword placed in a class, the method or variable declaration that changes how it operates. There are two types of modifier.
+
+A. Access Modifier: It gives us an access level of class, methods, and variable. There are some different access levels based on package and to create an object or inherited.
+
+Access		same Package 		Same Package 		Different Package		Different Package
+
+Modifier 		By OC			By Inheritance 		By OC			By Inheritance 
+
+DEFAULT		YES			YES			NO			NO
+
+PROTECTED 	YES			YES			NO			YES
+
+PUBLIC 		YES			YES			YES			YES
+
+PRIVATE		NO 			NO 			NO			NO
+
+#108. What are the steps in the JDBC connection ?
+
+While making a JDBC connection we go through the following steps:
+
+Package	htmldriver;
+
+import 	java.sql.Connection;
+
+import	java.sql.Statement;
+
+import 	java.sql.ResultSet;
+
+import	java.sql.DriverManager;
+
+import 	java.sql.SQLException;
+
+public 	class SQLConnector  {
+	public static void main(String[] args) throws classNotFoundException,
+SQLException  {
+			//Connection URL Syntax:
+"jbdc : mysql : // ipaddress : portnumber / db_name"
+		String dbUrl  =  "jdbc:mysql : //localhost :3036/emp";
+
+		//Database Username
+		String usermame  = "root";
+
+		//Database Password
+		String password  = "root";
+
+		//Query to Execute
+		String query  =  "select  *  from employee; ";
+
+		//Load mysql jdbc driver
+		Class.forName ("com.mysql.jdbc.Driver" );
+
+		//Create Connectation to DB
+		Connection con  = DriverManager.getConnection(dbUrl,username,password);
+		
+		//Create Statement object
+		Statement stmt  = con.createStatement();
+
+		//Execute the SQL Query. Store results in ResultSet
+		ResultSet rs = stmt.executeQuery (query);
+
+		//While loop to iterate through all data and print results
+		while (rs.next() ) { 
+				String myName  = rs.getString(1);
+
+			String myAge  = rs.getString(2);
+			System.out.Println (myName+ "   " + myAge );
+		}
+
+		//  closing DB Connection
+		con.close();
+		}
+	}
+	
+ 
